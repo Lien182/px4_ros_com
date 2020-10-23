@@ -11,6 +11,7 @@ rtps:
     msg: Airspeed
   - id: 6
     msg: BatteryStatus
+    send: true
   - id: 7
     msg: CameraCapture
   - id: 8
@@ -77,6 +78,7 @@ rtps:
     msg: LogMessage
   - id: 37
     msg: ManualControlSetpoint
+    receive: true
   - id: 38
     msg: MavlinkLog
   - id: 39
@@ -91,6 +93,7 @@ rtps:
     msg: ObstacleDistance
   - id: 44
     msg: OffboardControlMode
+    receive: true
   - id: 45
     msg: OpticalFlow
     receive: true
@@ -160,6 +163,7 @@ rtps:
     msg: TecsStatus
   - id: 76
     msg: TelemetryStatus
+    receive: true
   - id: 77
     msg: TestMotor
   - id: 78
@@ -189,8 +193,10 @@ rtps:
     msg: VehicleAttitudeSetpoint
   - id: 89
     msg: VehicleCommand
+    receive: true
   - id: 90
     msg: VehicleCommandAck
+    send: true
   - id: 91
     msg: VehicleConstraints
   - id: 92
@@ -199,8 +205,10 @@ rtps:
     msg: VehicleGlobalPosition
   - id: 94
     msg: VehicleGpsPosition
+    send: true
   - id: 95
     msg: VehicleLandDetected
+    send: true
   - id: 96
     msg: VehicleLocalPosition
   - id: 97
@@ -216,6 +224,7 @@ rtps:
     msg: VehicleRoi
   - id: 102
     msg: VehicleStatus
+    send: true
   - id: 103
     msg: VehicleStatusFlags
   - id: 104
