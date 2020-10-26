@@ -93,6 +93,7 @@ bool RtpsTopics::init(std::condition_variable* t_send_queue_cv, std::mutex* t_se
 @[if send_topics]@
 void RtpsTopics::publish(uint8_t topic_ID, char data_buffer[], size_t len)
 {
+    printf("[   micrortps_agent   ]\t topic ID '%hhu' to publish\n", topic_ID);
     switch (topic_ID)
     {
 @[for topic in send_topics]@
@@ -119,7 +120,7 @@ void RtpsTopics::publish(uint8_t topic_ID, char data_buffer[], size_t len)
         break;
 @[end for]@
         default:
-            printf("\033[1;33m[   micrortps_agent   ]\tUnexpected topic ID to publish\033[0m\n");
+            printf("\033[1;33m[   micrortps_agent   ]\tUnexpected topic ID '%hhu' to publish\033[0m\n", topic_ID);
         break;
     }
 }
@@ -129,6 +130,7 @@ void RtpsTopics::publish(uint8_t topic_ID, char data_buffer[], size_t len)
 bool RtpsTopics::getMsg(const uint8_t topic_ID, eprosima::fastcdr::Cdr &scdr)
 {
     bool ret = false;
+    printf("[   micrortps_agent   ]\t topic ID '%hhu' to getMsg\n", topic_ID);
     switch (topic_ID)
     {
 @[for topic in recv_topics]@
