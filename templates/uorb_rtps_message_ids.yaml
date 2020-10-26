@@ -38,6 +38,7 @@ rtps:
     msg: DifferentialPressure
   - id: 17
     msg: DistanceSensor
+    send: true
   - id: 18
     msg: EstimatorInnovations
   - id: 19
@@ -52,6 +53,7 @@ rtps:
     msg: EscStatus
   - id: 24
     msg: EstimatorStatus
+    send: true
   - id: 25
     msg: FollowTarget
   - id: 26
@@ -62,6 +64,7 @@ rtps:
     msg: GpsInjectData
   - id: 29
     msg: HomePosition
+    send: true
   - id: 30
     msg: InputRc
   - id: 31
@@ -91,6 +94,7 @@ rtps:
     msg: MultirotorMotorLimits
   - id: 43
     msg: ObstacleDistance
+    receive: true
   - id: 44
     msg: OffboardControlMode
     receive: true
@@ -121,6 +125,7 @@ rtps:
     msg: QshellRetval
   - id: 56
     msg: RadioStatus
+    send: true
   - id: 57
     msg: RateCtrlStatus
   - id: 58
@@ -136,6 +141,7 @@ rtps:
     msg: SensorAccel
   - id: 63
     msg: SensorBaro
+    send: true
   - id: 64
     msg: EstimatorSensorBias
   - id: 65
@@ -151,6 +157,7 @@ rtps:
     msg: SensorsStatusImu
   - id: 70
     msg: SensorSelection
+    send: true
   - id: 71
     msg: Px4IoStatus
   - id: 72
@@ -189,6 +196,7 @@ rtps:
     msg: VehicleAirData
   - id: 87
     msg: VehicleAttitude
+    send: true
   - id: 88
     msg: VehicleAttitudeSetpoint
   - id: 89
@@ -232,8 +240,10 @@ rtps:
     receive: true
   - id: 105
     msg: VtolVehicleStatus
+    send: true
   - id: 106
     msg: WindEstimate
+    send: true
   - id: 107
     msg: CollisionConstraints
     send: true
