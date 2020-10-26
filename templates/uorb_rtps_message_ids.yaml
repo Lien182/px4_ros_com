@@ -53,7 +53,6 @@ rtps:
     msg: EscStatus
   - id: 24
     msg: EstimatorStatus
-    send: true
   - id: 25
     msg: FollowTarget
   - id: 26
@@ -81,7 +80,6 @@ rtps:
     msg: LogMessage
   - id: 37
     msg: ManualControlSetpoint
-    receive: true
   - id: 38
     msg: MavlinkLog
   - id: 39
