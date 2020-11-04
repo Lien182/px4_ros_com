@@ -80,6 +80,7 @@ rtps:
     msg: LogMessage
   - id: 37
     msg: ManualControlSetpoint
+    receive: true
   - id: 38
     msg: MavlinkLog
   - id: 39
