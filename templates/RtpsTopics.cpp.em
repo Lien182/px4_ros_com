@@ -141,6 +141,13 @@ bool RtpsTopics::getMsg(const uint8_t topic_ID, eprosima::fastcdr::Cdr &scdr)
 @[    if topic == 'Timesync' or topic == 'timesync']@
                 if (getMsgSysID(&msg) == 0) {
 @[    end if]@
+
+@[    if topic == 'position_setpoint_triplet']@
+            printf("\033[1;33m[   micrortps_agent   ]\topic position_setpoint_triplet ID '%hhu' to getMsg\033[0m\n", topic_ID);
+
+@[    end if]@
+
+
                 // apply timestamp offset
                 uint64_t timestamp = getMsgTimestamp(&msg);
                 _timesync->addOffset(timestamp);
